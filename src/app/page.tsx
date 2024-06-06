@@ -18,7 +18,7 @@ export default function Home() {
     <main>
       <Banner />
       <Aboutus />
-      <Dedicated />
+      {/* <Dedicated /> */}
       {/* <Digital />
       <Beliefs /> */}
       <Wework />
