@@ -14,6 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <link rel="icon" href="/faviconNew.ico" type="image/x-icon" sizes="16x16"/>
       <body>
         <Navbar />
         {children}
