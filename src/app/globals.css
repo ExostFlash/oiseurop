@@ -388,3 +388,15 @@ html {
 .manage > div:nth-child(2) h3 {
   color: #747474;
 }
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkmark img {
+  width: 20px; /* Ajustez la taille selon vos besoins */
+  height: 20px; /* Ajustez la taille selon vos besoins */
+  margin-right: 0.5rem;
+}
