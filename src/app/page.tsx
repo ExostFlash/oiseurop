@@ -13,7 +13,7 @@ import Articles from "./components/Articles/index";
 import Joinus from "./components/Joinus/index";
 import Insta from "./components/Insta/index";
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <Banner />
@@ -32,4 +32,6 @@ export default function Home() {
       {/* <Insta /> */}
     </main>
   );
-}
+};
+
+export default Home;

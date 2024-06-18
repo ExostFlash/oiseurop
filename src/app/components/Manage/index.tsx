@@ -2,31 +2,46 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const names = [
   {
-    heading: "Audit de sécurité",
-    item1: "Audit de sécurité",
-    item2: "Cybersécurité",
-    item3: "Installations et configurations sécurisées",
-    item4: "",
-    item5: "",
+    heading: "Sécurité",
+    link: "securite",
+    item1: "Sécurisation de l'Infrastructure",
+    item2: "Protection Contre les Attaques",
+    item3: "Sécurité des Applications",
+    item4: "Gestion des Accès et des Identités",
+    item5: "Protection des Données",
+    item6: "Surveillance et Journalisation",
+    item7: "Tests de Sécurité",
+    item8: "Politiques de Sécurité",
+    item9: "Formation et Sensibilisation",
+    item10: "Gestion des Incidents",
   },
   {
-    heading: "Hébergement Cloud",
-    item1: "Hébergement Cloud",
-    item2: "Sauvegarde des données",
-    item3: "Optimisation d'infrastructure",
-    item4: "Administration des serveurs",
+    heading: "Hébergement",
+    link: "hebergement",
+    item1: "Hébergement Cloud Sécurisé",
+    item2: "Sauvegarde et Restauration des Données",
+    item3: "Optimisation de l'Infrastructure Cloud",
+    item4: "Administration et Gestion des Serveurs",
     item5: "Expert VMWare",
+    item6: "Surveillance et Maintenance 24/7",
+    item7: "Gestion des Performances et du Trafic",
   },
   {
     heading: "Développement et Web",
+    link: "web",
     item1: "Base de données",
     item2: "Développement de solutions backend",
     item3: "Création de site web",
-    item4: "",
-    item5: "",
+    item4: "Sécurité et Gestion des Données",
+    item5: "UI/UX Design",
+    item6: "Optimisation des Performances",
+    item7: "Tests et Assurance Qualité",
+    item8: "Maintenance et Support Continus",
+    item9: "Adaptabilité aux Nouvelles Technologies",
   },
 ];
 
@@ -44,36 +59,19 @@ const Manage = () => {
               <h4 className="text-2xl font-bold mb-3">{items.heading}</h4>
               <hr style={{ color: "darkgrey", width: "50%", margin: "auto" }} />
               <ul className="text-sm font-medium text-darkgrey mb-3 mt-6 text-left">
-                {items.item1 && (
-                  <li className="mb-3 checkmark">
-                    <img src="/images/mark.png" alt="mark" />
-                    {items.item1}
-                  </li>
-                )}
-                {items.item2 && (
-                  <li className="mb-3 checkmark">
-                    <img src="/images/mark.png" alt="mark" />
-                    {items.item2}
-                  </li>
-                )}
-                {items.item3 && (
-                  <li className="mb-3 checkmark">
-                    <img src="/images/mark.png" alt="mark" />
-                    {items.item3}
-                  </li>
-                )}
-                {items.item4 && (
-                  <li className="mb-3 checkmark">
-                    <img src="/images/mark.png" alt="mark" />
-                    {items.item4}
-                  </li>
-                )}
-                {items.item5 && (
-                  <li className="mb-3 checkmark">
-                    <img src="/images/mark.png" alt="mark" />
-                    {items.item5}
-                  </li>
-                )}
+                {Object.keys(items)
+                  .filter((key) => key !== "heading" && key !== "link")
+                  .map(
+                    (key) =>
+                      items[key] && (
+                        <li key={key} className="mb-3 checkmark">
+                          <img src="/images/mark.png" alt="mark" />
+                          <Link href={`/${items.link}/${key}`}>
+                            {items[key]}
+                          </Link>
+                        </li>
+                      )
+                  )}
               </ul>
             </div>
           ))}
