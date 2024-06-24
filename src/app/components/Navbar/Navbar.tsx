@@ -16,11 +16,11 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: "À propos de nous", href: "#aboutus-section", current: false },
-  { name: "Services", href: "#services-section", current: false },
-  { name: "FAQ", href: "#faq-section", current: false },
-  { name: "Blog", href: "#blog-section", current: false },
-  { name: "Testimonial", href: "#testimonial-section", current: false },
+  { name: "À propos de nous", href: "/#aboutus-section", current: false },
+  { name: "Services", href: "/#services-section", current: false },
+  { name: "FAQ", href: "/#faq-section", current: false },
+  { name: "Blog", href: "/#blog-section", current: false },
+  { name: "Testimonial", href: "/#testimonial-section", current: false },
 ];
 
 function classNames(...classes: string[]) {
