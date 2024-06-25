@@ -47,26 +47,6 @@ const footer = () => {
                   />
                 </Link>
               </div>
-              <div className="footer-icons">
-                <Link href="https://twitter.com">
-                  <Image
-                    src={"/images/footer/twitter.svg"}
-                    alt="twitter"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </div>
-              <div className="footer-icons">
-                <Link href="https://instagram.com">
-                  <Image
-                    src={"/images/footer/instagram.svg"}
-                    alt="instagram"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </div>
             </div>
           </div>
 

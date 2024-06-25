@@ -25,8 +25,8 @@ const Home = () => {
       {/* <Ourteam /> */}
       {/* <Featured /> */}
       <Manage />
-      {/* <FAQ /> */}
-      <Testimonials />
+      <FAQ />
+      {/* <Testimonials /> */}
       {/* <Articles /> */}
       {/* <Joinus /> */}
       {/* <Insta /> */}
