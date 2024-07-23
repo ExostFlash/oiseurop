@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="mx-auto max-w-7xl my-10 sm:py-10 px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl my-10 sm:py-10 px-6 lg:px-8 correct">
       <div className="grid grid-cols-1 lg:grid-cols-2 my-16">
         {/* COLUMN-1 */}
 
@@ -14,7 +14,7 @@ const Banner = () => {
           </div>
           <div className="py-3 text-center lg:text-start">
             <h1 className="text-6xl lg:text-80xl font-bold text-darkpurple">
-            Solutions de back-office informatique, réinventé.
+              Solutions de back-office informatique, réinventé.
             </h1>
           </div>
           {/* <div className="my-7 text-center lg:text-start">

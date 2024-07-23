@@ -453,3 +453,11 @@ div.securite {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.correct {
+  padding-top: unset !important;
+}
+
+.-mt-40 {
+  margin-top: -5rem !important;
+}

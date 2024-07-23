@@ -66,7 +66,7 @@ const Manage = () => {
                       items[key] && (
                         <li key={key} className="mb-3 checkmark">
                           <img src="/images/mark.png" alt="mark" />
-                          <Link href={`/${items.link}/${key}`}>
+                          <Link href={`/${items.link}#${key}`}>
                             {items[key]}
                           </Link>
                         </li>
