@@ -19,8 +19,8 @@ const products: ProductType[] = [
   {
     id: 2,
     section: "Clients",
-    name: ["Réalisation", "Retour"],
-    link: ["wework-section", "testimonial-section"],
+    name: ["Réalisation"],
+    link: ["wework-section"],
   },
 ];
 
@@ -89,12 +89,12 @@ const footer = () => {
               </h3>
             </div>
             <div className="flex justify-center md:justify-end">
-              <Link href="/">
+              <Link href="/politique">
                 <h3 className="text-offwhite pr-6">
                   Politique de confidentialité
                 </h3>
               </Link>
-              <Link href="/">
+              <Link href="/termes">
                 <h3 className="text-offwhite pl-6 border-solid border-l border-footer">
                   Termes et conditions
                 </h3>
