@@ -6,7 +6,6 @@ import Image from "next/image";
 // CAROUSEL DATA
 
 interface DataType {
-  profession: string;
   name: string;
   imgSrc: string;
   urlSite: string;
@@ -14,40 +13,74 @@ interface DataType {
 
 const postData: DataType[] = [
   {
-    profession: "Co-founder",
     name: "Le faire part éthique",
-    imgSrc: "/images/wework/avatar.svg",
-    urlSite: "",
+    imgSrc: "/images/wework/lefairepartethique.png",
+    urlSite: "https://lefairepartethique.fr",
   },
   {
-    profession: "Co-founder",
-    name: "John Doe",
-    imgSrc: "/images/wework/avatar3.svg",
-    urlSite: "",
+    name: "Huf",
+    imgSrc: "/images/wework/huf.png",
+    urlSite: "https://hufworldwide.com",
   },
   {
-    profession: "Co-founder",
-    name: "John Doe",
-    imgSrc: "/images/wework/avatar4.svg",
-    urlSite: "",
+    name: "Pelagic",
+    imgSrc: "/images/wework/pelagic.png",
+    urlSite: "https://pelagicgear.com/",
   },
   {
-    profession: "Co-founder",
-    name: "John Doe",
-    imgSrc: "/images/wework/avatar.svg",
-    urlSite: "",
+    name: "Mervin Made",
+    imgSrc: "/images/wework/mervin.ico",
+    urlSite: "https://www.mervinmade.com/",
   },
   {
-    profession: "Co-founder",
-    name: "John Doe",
-    imgSrc: "/images/wework/avatar3.svg",
-    urlSite: "",
+    name: "Culture King",
+    imgSrc: "/images/wework/cultureking.avif",
+    urlSite: "https://www.culturekings.com.au",
   },
   {
-    profession: "Co-founder",
-    name: "John Doe",
-    imgSrc: "/images/wework/avatar4.svg",
-    urlSite: "",
+    name: "RipCul",
+    imgSrc: "/images/wework/ripcul.webp",
+    urlSite: "https://www.ripcurl.com",
+  },
+  {
+    name: "TroyLee Designs",
+    imgSrc: "/images/wework/troylee.ico",
+    urlSite: "https://www.troyleedesignsbike.fr",
+  },
+  {
+    name: "SunRise",
+    imgSrc: "/images/wework/sunrise.jpg",
+    urlSite: "https://www.sunrisesurfshop.com/",
+  },
+  {
+    name: "Rellevate",
+    imgSrc: "/images/wework/rellevate.webp",
+    urlSite: "https://rellevate.com",
+  },
+  {
+    name: "Porcelanosa",
+    imgSrc: "/images/wework/porcelanosa.ico",
+    urlSite: "https://www.porcelanosa.com",
+  },
+  {
+    name: "Mosko",
+    imgSrc: "/images/wework/mosko.png",
+    urlSite: "https://moskomoto.com",
+  },
+  {
+    name: "The Levy Group",
+    imgSrc: "/images/wework/thelevygroup.ico",
+    urlSite: "https://www.thelevygroupinc.com",
+  },
+  {
+    name: "FreeWaters",
+    imgSrc: "/images/wework/freewaters.avif",
+    urlSite: "https://freewaters.com",
+  },
+  {
+    name: "BleuSalt",
+    imgSrc: "/images/wework/bleusalt.jpg",
+    urlSite: "https://bleusalt.com",
   },
 ];
 
@@ -104,12 +137,6 @@ export default class MultipleItems extends Component {
             <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">
               Nos travaux et client.
             </h3>
-            <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-2">
-              Nos travaux et client.
-            </h3>
-            <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-25 lg:-mr-32 my-2">
-              Nos travaux et client.
-            </h3>
           </div>
         </div>
 
@@ -123,22 +150,19 @@ export default class MultipleItems extends Component {
                     alt="gaby"
                     width={182}
                     height={182}
-                    className="inline-block m-auto"
+                    className="inline-block m-auto modif-img"
                   />
-                  <a href={items.urlSite}>
+                  <a target="_blanc" href={items.urlSite}>
                     <Image
                       src={"/images/wework/web.svg"}
                       alt="greenbg"
                       width={120}
                       height={120}
-                      className=" absolute inline-block position-linkedin"
+                      className="web-logo absolute inline-block position-linkedin"
                     />
                   </a>
                 </div>
                 <h4 className="text-4xl font-bold pt-14">{items.name}</h4>
-                <h3 className="text-2xl font-normal pt-4 pb-2 opacity-50">
-                  {items.profession}
-                </h3>
               </div>
             </div>
           ))}

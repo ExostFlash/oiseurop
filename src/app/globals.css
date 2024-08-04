@@ -465,3 +465,7 @@ div.securite {
 .pt-48 {
   padding-top: 1rem !important;
 }
+
+.modif-img {
+  border-radius: 50% 0% 50% 0%;
+}

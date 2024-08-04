@@ -8,40 +8,91 @@ const names = [
   {
     heading: "Sécurité",
     link: "securite",
-    item1: "Sécurisation de l'Infrastructure",
-    item2: "Protection Contre les Attaques",
-    item3: "Sécurité des Applications",
-    item4: "Gestion des Accès et des Identités",
-    item5: "Protection des Données",
-    item6: "Surveillance et Journalisation",
-    item7: "Tests de Sécurité",
-    item8: "Politiques de Sécurité",
-    item9: "Formation et Sensibilisation",
-    item10: "Gestion des Incidents",
+    items: [
+      {
+        name: "Sécurisation de l'Infrastructure",
+        link: "securisation-infrastructure",
+      },
+      { name: "Protection Contre les Attaques", link: "protection-attaques" },
+      { name: "Sécurité des Applications", link: "securite-applications" },
+      {
+        name: "Gestion des Accès et des Identités",
+        link: "gestion-acces-identites",
+      },
+      { name: "Protection des Données", link: "protection-donnees" },
+      {
+        name: "Surveillance et Journalisation",
+        link: "surveillance-journalisation",
+      },
+      { name: "Tests de Sécurité", link: "tests-securite" },
+      { name: "Politiques de Sécurité", link: "politiques-securite" },
+      {
+        name: "Formation et Sensibilisation",
+        link: "formation-sensibilisation",
+      },
+      { name: "Gestion des Incidents", link: "gestion-incidents" },
+    ],
   },
   {
     heading: "Hébergement",
     link: "hebergement",
-    item1: "Hébergement Cloud Sécurisé",
-    item2: "Sauvegarde et Restauration des Données",
-    item3: "Optimisation de l'Infrastructure Cloud",
-    item4: "Administration et Gestion des Serveurs",
-    item5: "Expert VMWare",
-    item6: "Surveillance et Maintenance 24/7",
-    item7: "Gestion des Performances et du Trafic",
+    items: [
+      {
+        name: "Hébergement Cloud Sécurisé",
+        link: "hebergement-cloud-securise",
+      },
+      {
+        name: "Sauvegarde et Restauration des Données",
+        link: "sauvegarde-restauration-donnees",
+      },
+      {
+        name: "Optimisation de l'Infrastructure Cloud",
+        link: "optimisation-infrastructure-cloud",
+      },
+      {
+        name: "Administration et Gestion des Serveurs",
+        link: "administration-gestion-serveurs",
+      },
+      { name: "Expert VMWare", link: "expert-vmware" },
+      {
+        name: "Surveillance et Maintenance 24/7",
+        link: "surveillance-maintenance-247",
+      },
+      {
+        name: "Gestion des Performances et du Trafic",
+        link: "gestion-performances-trafic",
+      },
+    ],
   },
   {
     heading: "Développement et Web",
     link: "web",
-    item1: "Base de données",
-    item2: "Développement de solutions backend",
-    item3: "Création de site web",
-    item4: "Sécurité et Gestion des Données",
-    item5: "UI/UX Design",
-    item6: "Optimisation des Performances",
-    item7: "Tests et Assurance Qualité",
-    item8: "Maintenance et Support Continus",
-    item9: "Adaptabilité aux Nouvelles Technologies",
+    items: [
+      { name: "Base de données", link: "base-donnees" },
+      {
+        name: "Développement de solutions backend",
+        link: "developpement-solutions-backend",
+      },
+      { name: "Création de site web", link: "creation-site-web" },
+      {
+        name: "Sécurité et Gestion des Données",
+        link: "securite-gestion-donnees",
+      },
+      { name: "UI/UX Design", link: "ui-ux-design" },
+      {
+        name: "Optimisation des Performances",
+        link: "optimisation-performances",
+      },
+      { name: "Tests et Assurance Qualité", link: "tests-assurance-qualite" },
+      {
+        name: "Maintenance et Support Continus",
+        link: "maintenance-support-continus",
+      },
+      {
+        name: "Adaptabilité aux Nouvelles Technologies",
+        link: "adaptabilite-nouvelles-technologies",
+      },
+    ],
   },
 ];
 
@@ -54,24 +105,19 @@ const Manage = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 mx-5 gap-14 manage">
-          {names.map((items, i) => (
+          {names.map((category, i) => (
             <div className="manageTabs text-center p-10" key={i}>
-              <h4 className="text-2xl font-bold mb-3">{items.heading}</h4>
+              <h4 className="text-2xl font-bold mb-3">{category.heading}</h4>
               <hr style={{ color: "darkgrey", width: "50%", margin: "auto" }} />
               <ul className="text-sm font-medium text-darkgrey mb-3 mt-6 text-left">
-                {Object.keys(items)
-                  .filter((key) => key !== "heading" && key !== "link")
-                  .map(
-                    (key) =>
-                      items[key] && (
-                        <li key={key} className="mb-3 checkmark">
-                          <img src="/images/mark.png" alt="mark" />
-                          <Link href={`/${items.link}#${key}`}>
-                            {items[key]}
-                          </Link>
-                        </li>
-                      )
-                  )}
+                {category.items.map((item, index) => (
+                  <li key={index} className="mb-3 checkmark">
+                    <img src="/images/mark.png" alt="mark" />
+                    <Link href={`/${category.link}#${item.link}`}>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
