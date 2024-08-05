@@ -152,15 +152,6 @@ export default class MultipleItems extends Component {
                     height={182}
                     className="inline-block m-auto modif-img"
                   />
-                  <a target="_blanc" href={items.urlSite}>
-                    <Image
-                      src={"/images/wework/web.svg"}
-                      alt="greenbg"
-                      width={120}
-                      height={120}
-                      className="web-logo absolute inline-block position-linkedin"
-                    />
-                  </a>
                 </div>
                 <h4 className="text-4xl font-bold pt-14">{items.name}</h4>
               </div>
