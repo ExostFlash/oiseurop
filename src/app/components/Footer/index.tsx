@@ -84,7 +84,7 @@ const footer = () => {
                 @2024 - Tous droits réservés par{" "}
                 <Link href="https://oiseurope.com/" target="_blank">
                   {" "}
-                  oiseurope.com
+                  Outsource Infromation Systems Europe
                 </Link>
               </h3>
             </div>
